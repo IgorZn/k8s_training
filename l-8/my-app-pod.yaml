@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+  labels:
+    app: nginx
+    env: prod
+    owner: IgorZnamensky
+    tier: front-end
+    hui: big_hui
+spec:
+  containers:
+    - name: web-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+    - name: api-container
+      image: tomcat:latest
+      ports:
+        - containerPort: 8080
